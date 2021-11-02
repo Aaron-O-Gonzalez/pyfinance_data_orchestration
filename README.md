@@ -9,4 +9,10 @@ For creation of a MySQL database:
     CREATE USER <user> IDENTIFIED BY <pass>;
     GRANT ALL PRIVILEGES ON airflow_db.* TO <user>;
     
-To set the LocalExecutor, there are two changes which need to be performed on the *airflow.cfg* file
+To set the LocalExecutor, it is recommended that the user installs the PyMySQL connector and perform the following two changes in the **airflow.cfg** file:
+    executor = LocalExecutor
+    sql_alchemy_conn = mysql+pymysql://<user>:<pass>@localhost:3306/airflow_db
+
+## Step 2: Dag Execution
+    
+    <img src="relative/path/in/repository/to/image.svg"/> 
