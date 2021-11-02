@@ -17,3 +17,8 @@ To set the LocalExecutor, it is recommended that the user installs the PyMySQL c
 <img src="https://github.com/Aaron-O-Gonzalez/pyfinance_data_orchestration/blob/master/stock_dag.png"/> 
 
 The figure above summarizes the workflow for the tasks in the **dag.py** file. In short, a temporary folder, i.e., *data*, is created in the *tmp* directory; the pyFinance data for AAPL and TSLA stocks are loaded for 1 day, 1 minute intervals and written to CSV files; the CSV files are moved to the *data* directory; the data is read into a pandas dataframe, and the top 20 rows are displayed.
+
+## Files
+**dag.py**: Instantiates the tasks that will be needed for carrying out the DAG.
+**plugins/ingest_stock_data**: Downloads the data based from the Pyfinance module based on stock ticker.
+**plugins/query_stock_data**: As a quality control measure, loads the CSV files into a dataframe and presents the top 20 rows.
