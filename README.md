@@ -14,5 +14,4 @@ To set the LocalExecutor, it is recommended that the user installs the PyMySQL c
     sql_alchemy_conn = mysql+pymysql://<user>:<pass>@localhost:3306/airflow_db
 
 ## Step 2: Dag Execution
-    
-    <img src="relative/path/in/repository/to/image.svg"/> 
+<img src="https://github.com/Aaron-O-Gonzalez/pyfinance_data_orchestration/blob/master/stock_dag.png"/> 
